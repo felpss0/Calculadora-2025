@@ -36,20 +36,40 @@
                 decimal resultado = 0;
 
                 if (opcao == "1")
-                {
                     resultado = num1 + num2;
-                }
+                
                 else if (opcao == "2")
-                {
                     resultado = num1 - num2;
-                }
+                
                 else if (opcao == "3")
-                {
                     resultado = num1 * num2;
-                }
+                
                 else if (opcao == "4") 
                 {
-                    resultado = num1 / num2;
+                    //opcao1
+                    //if (num2 != 0)
+                    //    resultado = num1 / num2;
+
+                    //else
+                    //    Console.WriteLine("Não é possivel dividir por zero");
+                    //    Console.ReadLine();
+                    //    continue;
+
+                    //opcao2
+                    //if (num2 == 0) 
+                    //{
+                    //        Console.WriteLine("Não é possivel dividir por zero");
+                    //        Console.ReadLine();
+                    //        continue;
+                    //}
+                    //resultado = num1 / num2;
+
+                    while (num2 == 0)
+                    {
+                        Console.Write("Não é possível dividir por 0\n Digite o segundo número novamente -> ");
+                        num2 = Convert.ToDecimal(Console.ReadLine());
+                    }
+                    resultado = num1/num2;
                 }
 
 
