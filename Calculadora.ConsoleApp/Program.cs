@@ -16,6 +16,7 @@
                 Console.WriteLine("2 - Subtrair");
                 Console.WriteLine("3 - Multiplicação");
                 Console.WriteLine("4 - Divisão");
+                Console.WriteLine("5 - Tabuada");
                 Console.WriteLine("S - Sair");
 
                 Console.Write("Escolha uma opção: ");
@@ -24,8 +25,34 @@
 
                 if (opcao == "S")
                     break;
+                else if (opcao == "5") 
+                {
+                    Console.WriteLine("-----------------------------");
+                    Console.WriteLine("Tabuada");
+                    Console.WriteLine("-----------------------------");
 
-                Console.Write("Digite o Primeiro numero: ");
+                    //usuario digita um numero
+                    Console.Write("Digite o numero: ");
+                    int numeroTabuada = Convert.ToInt32(Console.ReadLine());
+
+                    //calcula tabuada até o 10 desse numero
+                    for (int contador = 1; contador <= 10; contador++) 
+                    {
+                        int resultadoTabuada = numeroTabuada * contador;
+
+                        //string LinhaTabuada = numeroTabuada + " X " + contador + " = " + resultadoTabuada;
+                        Console.WriteLine($"{numeroTabuada} x {contador} = {resultadoTabuada}");
+                    }
+                    Console.ReadLine();
+                   
+                    continue;
+
+                    
+
+                }
+
+
+                    Console.Write("Digite o Primeiro numero: ");
                 string num1String = Console.ReadLine();
                 decimal num1 = Convert.ToDecimal(num1String);
 
