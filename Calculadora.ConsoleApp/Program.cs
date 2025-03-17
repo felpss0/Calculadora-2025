@@ -7,9 +7,6 @@
 
         static void Main(string[] args)
         {
-                string[] historicoOperacoes = new string[100];
-                int contadorHistorico = 0;
-
                
                 while (true)
                 {
@@ -126,19 +123,19 @@
 
             if (operacao == "1")
             {
-                resultado = num1 + num2;
+                resultado = Calculadora.Somar(num1, num2);
                 historicoOperacoes[contadorHistorico] = $"{num1} + {num2} = {resultado}";
             }
 
             else if (operacao == "2")
             {
-                resultado = num1 - num2;
+                resultado = Calculadora.Subtrair(num1, num2);
                 historicoOperacoes[contadorHistorico] = $"{num1} - {num2} = {resultado}";
             }
 
             else if (operacao == "3")
             {
-                resultado = num1 * num2;
+                resultado = Calculadora.Multiplicar(num1, num2);
                 historicoOperacoes[contadorHistorico] = $"{num1} * {num2} = {resultado}";
             }
 
@@ -168,7 +165,7 @@
                     Console.Write("Não é possível dividir por 0\n Digite o segundo número novamente -> ");
                     num2 = Convert.ToDecimal(Console.ReadLine());
                 }
-                resultado = num1 / num2;
+                resultado = Calculadora.Dividir(num1, num2);
                 historicoOperacoes[contadorHistorico] = $"{num1} / {num2} = {resultado}";
             }
 
